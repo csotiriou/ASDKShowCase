@@ -1,3 +1,47 @@
-PODFILE CHECKSUM: 2c2ef443266bea16ec8f214b74f7e7236be7f718
+PODS:
+  - AsyncDisplayKit (2.2):
+    - AsyncDisplayKit/PINRemoteImage (= 2.2)
+  - AsyncDisplayKit/Core (2.2)
+  - AsyncDisplayKit/PINRemoteImage (2.2):
+    - AsyncDisplayKit/Core
+    - PINRemoteImage/iOS (= 3.0.0-beta.8)
+    - PINRemoteImage/PINCache
+  - Atributika (3.1.4)
+  - PINCache (3.0.1-beta.4):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.4)
+    - PINCache/Core (= 3.0.1-beta.4)
+  - PINCache/Arc-exception-safe (3.0.1-beta.4):
+    - PINCache/Core
+  - PINCache/Core (3.0.1-beta.4):
+    - PINOperation (= 1.0.3)
+  - PINOperation (1.0.3)
+  - PINRemoteImage/Core (3.0.0-beta.8)
+  - PINRemoteImage/iOS (3.0.0-beta.8):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.0-beta.8):
+    - PINCache (= 3.0.1-beta.4)
+    - PINRemoteImage/Core
+  - pop (1.0.9)
+  - SnapKit (3.2.0)
+  - TLIndexPathTools (0.4.4)
+
+DEPENDENCIES:
+  - AsyncDisplayKit (~> 2.0)
+  - Atributika (~> 3.1)
+  - pop
+  - SnapKit (~> 3.2.0)
+  - TLIndexPathTools
+
+SPEC CHECKSUMS:
+  AsyncDisplayKit: 1585f6cd0531ae9b30476f5912f577b73ebcb0e4
+  Atributika: 3508639d03604c956d6b0aa186de964d2c1ff6c1
+  PINCache: a89c8f609232afac77128557bd12c861844423d7
+  PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
+  PINRemoteImage: c4f9f16932840c597f32e69dd288e10e111a1929
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  TLIndexPathTools: 956bf0686bcd5e7dc8e2c408d28e7a312ec268a1
+
+PODFILE CHECKSUM: 49e6171a0c8c948e1691d066994ef45989bf7c13
 
 COCOAPODS: 1.2.0

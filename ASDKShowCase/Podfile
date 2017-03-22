@@ -6,5 +6,9 @@ target 'ASDKShowCase' do
   use_frameworks!
 
   # Pods for ASDKShowCase
-
+  pod 'TLIndexPathTools'
+  pod 'pop'
+  pod 'SnapKit', '~>3.2.0'
+  pod 'AsyncDisplayKit', '~>2.0'
+  pod 'Atributika', '~>3.1'
 end

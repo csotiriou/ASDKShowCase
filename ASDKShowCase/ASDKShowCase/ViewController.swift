@@ -7,12 +7,44 @@
 //
 
 import UIKit
+import AsyncDisplayKit
 
-class ViewController: UIViewController {
+class ViewController: ASViewController<ASDisplayNode> {
 
+	convenience init() {
+		self.init(node : ASDisplayNode())
+	}
+	
+	override init(node: ASDisplayNode) {
+		super.init(node: node)
+		self.node.automaticallyManagesSubnodes = true
+	}
+	
+	required convenience init?(coder aDecoder: NSCoder) {
+		self.init(node: ASDisplayNode())
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		
+		let itemDetailsNode = ItemDetailsHeader()
+		
+		let outerNode = ASScrollNode()
+		outerNode.automaticallyManagesContentSize = true
+		outerNode.automaticallyManagesSubnodes = true
+		
+		outerNode.layoutSpecBlock = { (node, size) -> ASLayoutSpec in
+			return ASStackLayoutSpec(direction: .vertical, spacing: 10, justifyContent: .center, alignItems: .center, children: [itemDetailsNode])
+		}
+		
+		outerNode.addSubnode(itemDetailsNode)
+		
+		
+		self.node.backgroundColor = UIColor.black
+		
+		self.node.layoutSpecBlock = { (node, size) -> ASLayoutSpec in
+			return ASInsetLayoutSpec.init(insets: .init(top: 10, left: 10, bottom: 10, right: 10), child: outerNode)
+		}
 	}
 
 	override func didReceiveMemoryWarning() {
